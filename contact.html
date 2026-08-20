@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="om" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Contact Us • Nu Quunnamaa - Maatii Keenya">
+    <title>Contact • Nu Quunnamaa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/family.css">
+    <style>
+        .contact-form-card {
+            background: var(--bg-card, #1e1e2f);
+            border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+            border-radius: 20px;
+            padding: clamp(1.5rem, 4vw, 2.5rem);
+            max-width: 650px;
+            margin: 2rem auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--text-main, #fff);
+            font-size: 0.95rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color, rgba(255, 255, 255, 0.2));
+            background: rgba(0, 0, 0, 0.25);
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .form-input:focus {
+            border-color: var(--color-accent, #00f2fe);
+            box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+        }
+
+        textarea.form-input {
+            resize: vertical;
+            min-height: 120px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <a href="index.html" class="logo" aria-label="Maatii Keenya Logo">
+            <i class="fas fa-heart logo-heart" aria-hidden="true"></i> Maatii
+        </a>
+
+        <nav class="navbar" id="navbar" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="family.html">Family</a>
+        </nav>
+
+        <div class="header-actions">
+            <div class="theme-select-wrapper">
+                <i class="fas fa-palette theme-icon" aria-hidden="true"></i>
+                <select id="theme-select" aria-label="Select Theme">
+                    <option value="dark">🌙</option>
+                    <option value="light">☀️</option>
+                    <option value="other">⚡</option>
+                </select>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="family-content">
+        
+        <!-- Hero Section -->
+        <section class="family-hero">
+            <div class="container">
+                <div class="family-header-card">
+                    <span class="love-badge"><i class="fas fa-envelope" aria-hidden="true"></i> ERGAA ERGAA</span>
+                    <h1 class="family-main-title">Nu Quunnamaa</h1>
+                    <p class="family-subtitle-en">Gorsa, yaada, yookiin gaaffii qabdaniif ergaa keessan nuus dhaqqabsiisaa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Cards & Form -->
+        <section class="container">
+            <div class="values-grid">
+                <div class="love-quote-card" style="text-align: center;">
+                    <div class="card-icon">📍</div>
+                    <h3>Teessoo Keenya</h3>
+                    <p>Finfinnee, Oromiyaa</p>
+                </div>
+
+                <div class="love-quote-card" style="text-align: center;">
+                    <div class="card-icon">📞</div>
+                    <h3>Lakk Bilbilaa</h3>
+                    <p>+251 917345202</p>
+                    <p>+251 936987775</p>
+                </div>
+
+                <div class="love-quote-card" style="text-align: center;">
+                    <div class="card-icon">✉️</div>
+                    <h3>E-mail</h3>
+                    <p>jabaatesgera@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-card">
+                <form id="contactForm" onsubmit="event.preventDefault(); alert('Ergaan keessan milkaa’inaan ergameera! Galatoomaa.'); this.reset();">
+                    <div class="form-group">
+                        <label for="fullName">Maqaa Guutuu</label>
+                        <input type="text" id="fullName" class="form-input" placeholder="Maqaa keessan barreessaa..." autocomplete="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailAddr">Teessoo E-mail</label>
+                        <input type="email" id="emailAddr" class="form-input" placeholder="example@gmail.com" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Dhimma Ergaa</label>
+                        <input type="text" id="subject" class="form-input" placeholder="Mata duree..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Ergaa Keessan</label>
+                        <textarea id="message" class="form-input" placeholder="Ergaa keessan asitti barreessaa..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-love" style="width: 100%; justify-content: center;">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i> Ergaa Ergaddhu
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; <span id="jabaa-year"></span> Yaikob Tesgera Tujuba & Family isaa wajjin. Mirgi Maxxansaa Seeraan Eeggamaadha.</p>
+    </footer>
+
+    <script src="js/family.js"></script>
+</body>
+</html>

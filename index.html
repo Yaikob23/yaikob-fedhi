@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="om" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Maatii Keenya - Fuula Duraa, Teeknoolojii, fi Galmee Suuraa Maatii">
+    <title>Home • Fuula Duraa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/family.css">
+</head>
+<body>
+
+    <!-- Header / Dynamic Responsive Navigation -->
+    <header class="header">
+        <a href="index.html" class="logo" aria-label="Maatii Keenya Logo">
+            <i class="fas fa-heart logo-heart" aria-hidden="true"></i> Maatii 
+        </a>
+
+        <nav class="navbar" id="navbar" aria-label="Main Navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="family.html">Family</a>
+        </nav>
+
+        <div class="header-actions">
+            <div class="theme-select-wrapper">
+                <i class="fas fa-palette theme-icon" aria-hidden="true"></i>
+                <select id="theme-select" aria-label="Select Color Theme">
+                    <option value="dark">🌙</option>
+                    <option value="light">☀️</option>
+                    <option value="other">⚡</option>
+                </select>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Stream -->
+    <main class="family-content">
+        
+        <!-- Hero Banner -->
+        <section class="family-hero">
+            <div class="container">
+                <div class="family-header-card">
+                    <span class="love-badge"><i class="fas fa-star" aria-hidden="true"></i> BAGA NAGAAN DUFTAN</span>
+                    <h1 class="family-main-title">Baga nagaan gara fuula weebsaayitii keenyaatti dhuftan! ❤️🙏🌸</h1>
+                    <p class="family-subtitle-en">Nuti teeknoolojii, aadaa, fi tokkummaa maatii wajjin walitti fiduun fuuldura ifa ta'e ijaarra.</p>
+                    
+                    <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="service.html" class="btn btn-primary btn-love">
+                            <i class="fas fa-rocket" aria-hidden="true"></i> Tajaajila Keenya
+                        </a>
+                        <a href="contact.html" class="btn btn-outline" style="border: 1px solid var(--border-color, rgba(255,255,255,0.2)); color: var(--text-main, #fff); padding: 0.75rem 1.5rem; border-radius: 12px; text-decoration: none;">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i> Nu Quunnamaa
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights Grid -->
+        <section class="container family-values-section">
+            <div class="values-grid">
+                <div class="love-quote-card">
+                    <div class="card-icon">💻</div>
+                    <h3>Furmaata Teeknooloojii 💻🚀</h3>
+                    <p>Softwarewwan ammayyaa, weebsaayitoota, fi tajaajila saayibarii tiiknooloojii qulqullinaa fi sammuu namaa hawwatuun dhiyeessina. 💡🌐✨</p>
+                </div>
+
+                <div class="love-quote-card">
+                    <div class="card-icon">🤝</div>
+                    <h3>Kabajaa fi Tokkummaa ❤️</h3>
+                    <p>Maatii fi hawaasa keenya waliin amanamummaa, kabajaa fi jaalala irratti hundaa’uun waliin guddanna. 🌱</p>
+                </div>
+
+                <div class="love-quote-card">
+                    <div class="card-icon">🌟</div>
+                    <h3>Mul’ata Fuulduraa 🌟🚀</h3>
+                    <p>Dhaloota dhufuuf fakkeenya gaarii ta’uuf fi ogummaa keenyaan addunyaa jijjiiruuf tattaafanna. 🌍💡❤️</p>
+                </div>
+            </div>
+        
+    </main>
+
+
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; <span id="jabaa-year"></span> Yaikob Tesgera Tujuba & Family Isaa wajjin. Mirgi Maxxansaa Seeraan Eeggamaadha.</p>
+    </footer>
+
+    <script src="js/family.js"></script>
+</body>
+</html>

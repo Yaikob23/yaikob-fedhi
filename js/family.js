@@ -212,11 +212,24 @@ function renderGallery(photos) {
         item.setAttribute("tabindex", "0");
         item.setAttribute("role", "button");
         item.setAttribute("aria-label", `Open ${photo.alt || 'Image'}`);
+        
+        // Extract clean filename label to match device photo gallery view
+        const rawName = photo.publicId ? photo.publicId.split('/').pop() : (photo.alt || `Image_${idx + 1}`);
+        const labelText = rawName.length > 15 ? `${rawName.substring(0, 7)}...${rawName.slice(-5)}` : rawName;
+
         item.innerHTML = `
             <img src="${photo.thumbUrl}" alt="${photo.alt || 'Family Memory'}" loading="lazy">
-            <div class="gallery-overlay"><i class="fas fa-expand" aria-hidden="true"></i></div>
+            <div class="gallery-filename-overlay">${labelText}</div>
         `;
+        
         item.addEventListener("click", () => openLightbox(idx));
+        item.addEventListener("keydown", (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openLightbox(idx);
+            }
+        });
+        
         galleryGrid.appendChild(item);
     });
 }
@@ -396,7 +409,7 @@ function handleTouchMove(e) {
 }
 
 function handleTouchEnd(e) {
-    if (scale > 1) return; // Prevent swipe trigger when zoomed in
+    if (scale > 1) return;
 
     if (e.changedTouches.length === 1) {
         const endX = e.changedTouches[0].clientX;
